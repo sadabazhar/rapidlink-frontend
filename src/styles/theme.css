@@ -1,0 +1,21 @@
+:root {
+  /* Backgrounds */
+  --background: #0c1117;
+  --surface: rgba(255, 255, 255, 0.05);
+  --surface-hover: rgba(255, 255, 255, 0.1);
+
+  /* Borders */
+  --border: rgba(255, 255, 255, 0.1);
+
+  /* Brand */
+  --primary: #2dd4bf;
+  --primary-dark: #0d9488;
+
+  /* Text */
+  --foreground: #ffffff;
+  --foreground-secondary: #a1a1aa;
+  --foreground-muted: #71717a;
+
+  /* Effects */
+  --shadow-primary: rgba(45, 212, 191, 0.2);
+}
