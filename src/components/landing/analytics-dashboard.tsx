@@ -20,46 +20,46 @@ import {
 import LayoutContainer from '@/components/layout/layout-container'
 
 const areaData = [
-  { day: 'Mon', value: 1240 },
-  { day: 'Tue', value: 2100 },
-  { day: 'Wed', value: 1890 },
-  { day: 'Thu', value: 2780 },
-  { day: 'Fri', value: 3490 },
-  { day: 'Sat', value: 2390 },
-  { day: 'Sun', value: 4200 },
+  { day: 'Mon', clicks: 1246 },
+  { day: 'Tue', clicks: 2293 },
+  { day: 'Wed', clicks: 1898 },
+  { day: 'Thu', clicks: 2780 },
+  { day: 'Fri', clicks: 3499 },
+  { day: 'Sat', clicks: 2391 },
+  { day: 'Sun', clicks: 4222 },
 ]
 
 const countryData = [
-  { country: 'US', value: 4200 },
-  { country: 'DE', value: 3100 },
-  { country: 'JP', value: 2400 },
-  { country: 'BR', value: 1900 },
-  { country: 'FR', value: 1500 },
-  { country: 'IN', value: 1200 },
+  { country: 'IN', clicks: 5200 },
+  { country: 'US', clicks: 4100 },
+  { country: 'GB', clicks: 2800 },
+  { country: 'DE', clicks: 2100 },
+  { country: 'SG', clicks: 1700 },
+  { country: 'AE', clicks: 1400 },
 ]
 
 const stats = [
   {
     label: 'Total clicks',
-    value: '284.2K',
+    clicks: '284.2K',
     change: '+12.4%',
     icon: MousePointerClick,
   },
   {
     label: 'Active links',
-    value: '1,284',
+    clicks: '1,284',
     change: '+8.1%',
     icon: Link2,
   },
   {
     label: 'Unique visitors',
-    value: '92.7K',
+    clicks: '92.7K',
     change: '+24.3%',
     icon: Globe,
   },
   {
     label: 'Conversion',
-    value: '8.42%',
+    clicks: '8.42%',
     change: '+1.2%',
     icon: TrendingUp,
   },
@@ -107,8 +107,8 @@ const AnalyticsDashboard = () => {
           </h2>
 
           <p className="mx-auto max-w-2xl text-base leading-relaxed text-(--foreground-secondary) sm:text-lg">
-            Real-time analytics with country, device, and
-            traffic breakdowns — built for modern teams.
+            See where your traffic comes from, how links perform,
+            and what your audience engages with most.
           </p>
         </div>
 
@@ -132,7 +132,7 @@ const AnalyticsDashboard = () => {
                 </div>
 
                 <div className="text-2xl font-semibold tracking-tight text-(--foreground)">
-                  {stat.value}
+                  {stat.clicks}
                 </div>
 
                 <p className="mt-1 text-sm text-(--foreground-muted)">
@@ -236,7 +236,7 @@ const AnalyticsDashboard = () => {
 
                     <Area
                       type="monotone"
-                      dataKey="value"
+                      dataKey="clicks"
                       stroke="var(--primary)"
                       strokeWidth={2.5}
                       fill="url(#clickGradient)"
@@ -302,7 +302,7 @@ const AnalyticsDashboard = () => {
                     />
 
                     <Bar
-                      dataKey="value"
+                      dataKey="clicks"
                       fill="var(--primary)"
                       radius={[8, 8, 0, 0]}
                     />

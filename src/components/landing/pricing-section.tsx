@@ -5,14 +5,15 @@ import LayoutContainer from '@/components/layout/layout-container'
 
 const pricingTiers = [
   {
-    name: 'Hobby',
+    name: 'Free',
     price: '$0',
     description:
-      'Perfect for personal projects and small experiments.',
+      'Get started with short links and basic analytics for personal use.',
     features: [
-      '500 links per month',
-      'Basic analytics',
-      'RapidLink domain',
+      '100 links',
+      'Basic click analytics',
+      'RapidLink branded domain',
+      '50 QR code generation',
       'Community support',
     ],
     cta: 'Start free',
@@ -20,30 +21,32 @@ const pricingTiers = [
   },
   {
     name: 'Pro',
-    price: '$19',
+    price: '$5',
     description:
-      'Built for creators, startups, and growing product teams.',
+      'Perfect for creators, freelancers, startups, and growing businesses.',
     features: [
-      '50k links per month',
+      '2,000 links',
       'Real-time analytics',
-      'Custom branded domain',
-      'API access',
+      'Custom branded domains',
+      'Developer API access',
+      '1,000 Customizable QR codes',
       'Priority email support',
     ],
-    cta: 'Start 14-day trial',
+    cta: 'Start free trial',
     featured: true,
   },
   {
-    name: 'Scale',
-    price: '$99',
+    name: 'Business',
+    price: '$12',
     description:
-      'Advanced infrastructure for high-scale production workloads.',
+      'Advanced tools and higher limits for teams managing large traffic.',
     features: [
-      'Unlimited links',
-      'Advanced analytics',
-      'Unlimited domains',
-      'Webhooks + SSO',
-      '99.99% SLA',
+      '50,000+ links',
+      'Advanced analytics dashboard',
+      'Unlimited custom domains',
+      'Team collaboration',
+      'Webhook integrations',
+      'Priority support',
     ],
     cta: 'Contact sales',
     featured: false,
@@ -56,11 +59,7 @@ const PricingSection = () => {
       id="pricing"
       className="relative py-24 sm:py-32"
     >
-      {/* Background Glow */}
-      <div className="absolute inset-0 overflow-hidden">
-        <div className="absolute left-1/2 top-0 h-87.5 w-87.5 -translate-x-1/2 rounded-full bg-(--primary)/10 blur-3xl" />
-      </div>
-
+      
       <LayoutContainer className="relative z-10">
         {/* Section Header */}
         <div className="mb-14 text-center">
@@ -84,12 +83,13 @@ const PricingSection = () => {
           {pricingTiers.map((tier) => (
             <div
               key={tier.name}
-              className={`relative overflow-hidden rounded-4xl border p-8 backdrop-blur-2xl transition-all duration-300 ${
+              className={`relative rounded-4xl border p-8 backdrop-blur-2xl transition-all duration-300 ${
                 tier.featured
                   ? 'scale-[1.02] border-(--primary)/30 bg-(--surface-hover) shadow-[0_30px_100px_-20px_var(--shadow-primary)]'
                   : 'border-(--border) bg-(--surface) hover:border-(--primary)/20 hover:bg-(--surface-hover)'
               }`}
             >
+
               {/* Featured Badge */}
               {tier.featured && (
                 <div className="absolute left-1/2 top-0 -translate-x-1/2 -translate-y-1/2 rounded-full bg-linear-to-r from-(--primary) to-(--primary-dark) px-4 py-1.5 text-xs font-semibold text-(--background) shadow-(--shadow-primary)">

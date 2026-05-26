@@ -13,6 +13,10 @@ const navItems = [
     href: '#analytics',
   },
   {
+    label: 'API',
+    href: '#api',
+  },
+  {
     label: 'Pricing',
     href: '#pricing',
   },

@@ -26,7 +26,7 @@ const features = [
     icon: Code2,
     title: 'Developer API',
     description:
-      'REST APIs and SDKs for TypeScript, Go, Python, and backend automation.',
+      'Create and manage short links programmatically using a simple REST API.',
   },
   {
     icon: Shield,
@@ -54,28 +54,22 @@ const FeaturesSection = () => {
       id="features"
       className="relative py-24 sm:py-32"
     >
-      {/* Background Glow */}
-      <div className="absolute inset-0 overflow-hidden">
-        <div className="absolute right-0 top-0 h-75 w-75 rounded-full bg-(--primary)/10 blur-3xl" />
-
-        <div className="absolute bottom-0 left-0 h-62.5 w-62.5 rounded-full bg-(--primary-dark)/10 blur-3xl" />
-      </div>
 
       <LayoutContainer className="relative z-10">
         {/* Section Header */}
         <div className="mb-14 max-w-2xl">
 
           <h2 className="mb-4 text-4xl font-semibold tracking-tight text-(--foreground) sm:text-5xl">
-            Built for teams that
+            More than just
             <span className="bg-linear-to-r from-(--primary) to-(--primary-dark) bg-clip-text text-transparent">
               {' '}
-              ship fast.
+              short links.
             </span>
           </h2>
 
           <p className="text-base leading-relaxed text-(--foreground-secondary) sm:text-lg">
-            Everything modern teams need to shorten, manage,
-            analyze, and scale links globally.
+            Track analytics, manage branded links, generate QR codes,
+            and simplify link sharing from one powerful platform.
           </p>
         </div>
 

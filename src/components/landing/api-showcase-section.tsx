@@ -24,11 +24,10 @@ const apiFeatures = [
 
 const ApiShowcaseSection = () => {
   return (
-    <section className="relative py-24 sm:py-32">
-      {/* Background Glow */}
-      <div className="absolute inset-0 overflow-hidden">
-        <div className="absolute left-1/2 top-0 h-75 w-75 -translate-x-1/2 rounded-full bg-(--primary)/10 blur-3xl" />
-      </div>
+    <section
+      id="api"
+      className="relative py-24 sm:py-32"
+    >
 
       <LayoutContainer className="relative z-10">
         <div className="grid gap-16 lg:grid-cols-2 lg:items-center">

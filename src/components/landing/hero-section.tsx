@@ -10,23 +10,30 @@ import Button from '@/components/ui/button'
 import LayoutContainer from '@/components/layout/layout-container'
 
 const HeroSection = () => {
+
+  const shortUrl = 'rpd.link/product-launch'
+  const clickCount = 12847
+
   const [url, setUrl] = useState('')
   const [copied, setCopied] = useState(false)
 
-  const handleCopy = () => {
-    setCopied(true)
+  const handleCopy = async () => {
+     try {
+      await navigator.clipboard.writeText(shortUrl)
 
-    setTimeout(() => {
-      setCopied(false)
-    }, 1600)
+      setCopied(true)
+
+      setTimeout(() => {
+        setCopied(false)
+      }, 1600)
+    } catch (error) {
+      console.error('Failed to copy:', error)
+    }
   }
 
   return (
     <section className="relative overflow-hidden py-24 sm:py-32">
-      {/* Background Glow */}
-      <div className="absolute inset-0 overflow-hidden">
-        <div className="absolute left-1/2 top-0 h-450 w-750 ..."/>
-      </div>
+
       <LayoutContainer className="relative z-10">
         <div className="mx-auto max-w-5xl text-center">
           {/* Announcement Badge */}
@@ -48,8 +55,8 @@ const HeroSection = () => {
 
           {/* Description */}
           <p className="mx-auto mb-10 max-w-2xl text-base leading-relaxed text-(--foreground-secondary) sm:text-lg">
-            RapidLink turns long URLs into branded short links with
-            developer-grade analytics — built for teams that move fast.
+            Create short links, track analytics, and manage everything
+            from one simple and fast platform built to simplify link management.
           </p>
 
           {/* URL Shortener */}
@@ -85,7 +92,7 @@ const HeroSection = () => {
           <div className="flex flex-wrap items-center justify-center gap-3 text-sm text-(--foreground-secondary)">
             <div className="rounded-full border border-(--border) bg-(--surface) px-4 py-2 backdrop-blur-sm">
               <span className="font-mono text-(--primary)">
-                rpd.link/product-launch
+                {shortUrl}
               </span>
             </div>
 
@@ -96,7 +103,7 @@ const HeroSection = () => {
               <Copy className="h-4 w-4" />
             </button>
 
-            <span>12,847 clicks tracked today</span>
+            <span>{clickCount.toLocaleString()} clicks tracked today</span>
           </div>
         </div>
       </LayoutContainer>
